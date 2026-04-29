@@ -1,0 +1,380 @@
+[
+  {
+    "id": 1,
+    "name": "UV Protection Sunglasses",
+    "brand": "SunShade Pro",
+    "price": 15,
+    "currency": "$",
+    "rating": 4.7,
+    "reviews": 312,
+    "stock": 10,
+    "description": "Stylish UV400 protection sunglasses with polarized lenses, perfect for beach days and summer outings. Lightweight frame with anti-glare coating.",
+    "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=600&q=80",
+    "category": "Accessories",
+    "tags": [
+      "sunglasses",
+      "UV protection",
+      "summer",
+      "polarized"
+    ],
+    "isFeatured": true,
+    "discount": 10
+  },
+  {
+    "id": 2,
+    "name": "SPF 50+ Sunscreen Lotion",
+    "brand": "GlowGuard",
+    "price": 18,
+    "currency": "$",
+    "rating": 4.8,
+    "reviews": 527,
+    "stock": 45,
+    "description": "Broad-spectrum SPF 50+ sunscreen lotion that protects against UVA & UVB rays. Water-resistant, non-greasy formula suitable for all skin types.",
+    "image": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=600&q=80",
+    "category": "Skincare",
+    "tags": [
+      "sunscreen",
+      "SPF 50",
+      "skincare",
+      "UV protection"
+    ],
+    "isFeatured": true,
+    "discount": 0
+  },
+  {
+    "id": 3,
+    "name": "Straw Beach Hat",
+    "brand": "CoastalWear",
+    "price": 22,
+    "currency": "$",
+    "rating": 4.6,
+    "reviews": 198,
+    "stock": 30,
+    "description": "Handwoven wide-brim straw hat that provides natural shade and sun protection. Adjustable inner band fits all head sizes. Perfect poolside and beach accessory.",
+    "image": "https://images.unsplash.com/photo-1521369909029-2afed882baee?w=600&q=80",
+    "category": "Accessories",
+    "tags": [
+      "hat",
+      "beach",
+      "straw",
+      "sun protection"
+    ],
+    "isFeatured": false,
+    "discount": 5
+  },
+  {
+    "id": 4,
+    "name": "Women's Floral Bikini Set",
+    "brand": "TropicLane",
+    "price": 35,
+    "currency": "$",
+    "rating": 4.5,
+    "reviews": 404,
+    "stock": 20,
+    "description": "Vibrant floral print bikini set with adjustable straps and tie sides. Made from chlorine-resistant fabric for long-lasting color. Available in S, M, L, XL.",
+    "image": "https://images.unsplash.com/photo-1570976447640-ac859083963f?w=600&q=80",
+    "category": "Swimwear",
+    "tags": [
+      "bikini",
+      "swimwear",
+      "women",
+      "floral"
+    ],
+    "isFeatured": true,
+    "discount": 15
+  },
+  {
+    "id": 5,
+    "name": "Men's Quick-Dry Swim Shorts",
+    "brand": "WaveCraft",
+    "price": 28,
+    "currency": "$",
+    "rating": 4.6,
+    "reviews": 289,
+    "stock": 35,
+    "description": "Lightweight quick-dry swim shorts with mesh lining and side pockets. Built-in UV protection UPF 50+. Elastic waistband with drawstring for a secure fit.",
+    "image": "https://images.unsplash.com/photo-1591195853828-11db59a44f43?w=600&q=80",
+    "category": "Swimwear",
+    "tags": [
+      "swim shorts",
+      "men",
+      "quick-dry",
+      "beach"
+    ],
+    "isFeatured": false,
+    "discount": 0
+  },
+  {
+    "id": 6,
+    "name": "Leather Strap Flat Sandals",
+    "brand": "BareSole",
+    "price": 42,
+    "currency": "$",
+    "rating": 4.4,
+    "reviews": 176,
+    "stock": 18,
+    "description": "Genuine leather flat sandals with cushioned footbed and adjustable ankle strap. Slip-resistant rubber sole ideal for beach boardwalks and city strolls.",
+    "image": "https://images.unsplash.com/photo-1603487742131-4160ec999306?w=600&q=80",
+    "category": "Footwear",
+    "tags": [
+      "sandals",
+      "leather",
+      "flat",
+      "women"
+    ],
+    "isFeatured": false,
+    "discount": 10
+  },
+  {
+    "id": 7,
+    "name": "Men's Linen Short-Sleeve Shirt",
+    "brand": "BreezeWear",
+    "price": 38,
+    "currency": "$",
+    "rating": 4.7,
+    "reviews": 341,
+    "stock": 25,
+    "description": "100% pure linen short-sleeve shirt in breathable, lightweight fabric. Relaxed fit perfect for summer vacations, beach bars, and casual outings. Available in 6 colors.",
+    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600&q=80",
+    "category": "Summer Outfits",
+    "tags": [
+      "linen",
+      "shirt",
+      "men",
+      "casual"
+    ],
+    "isFeatured": true,
+    "discount": 0
+  },
+  {
+    "id": 8,
+    "name": "Insulated Stainless Steel Water Bottle",
+    "brand": "HydroFresh",
+    "price": 26,
+    "currency": "$",
+    "rating": 4.9,
+    "reviews": 812,
+    "stock": 60,
+    "description": "Double-wall vacuum insulated bottle keeps drinks cold for 24 hours. BPA-free, leak-proof lid with carry loop. Perfect for hot summer days and outdoor activities.",
+    "image": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=600&q=80",
+    "category": "Beach Accessories",
+    "tags": [
+      "water bottle",
+      "insulated",
+      "hydration",
+      "outdoor"
+    ],
+    "isFeatured": true,
+    "discount": 0
+  },
+  {
+    "id": 9,
+    "name": "Oversized Beach Tote Bag",
+    "brand": "ShoreStyle",
+    "price": 32,
+    "currency": "$",
+    "rating": 4.5,
+    "reviews": 233,
+    "stock": 22,
+    "description": "Spacious canvas tote bag with inner zipper pocket and mesh side pockets. Fits towels, sunscreen, snacks, and more. Machine washable and water-resistant lining.",
+    "image": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600&q=80",
+    "category": "Beach Accessories",
+    "tags": [
+      "tote bag",
+      "beach",
+      "canvas",
+      "storage"
+    ],
+    "isFeatured": false,
+    "discount": 5
+  },
+  {
+    "id": 10,
+    "name": "Quick-Dry Microfiber Beach Towel",
+    "brand": "DryCove",
+    "price": 19,
+    "currency": "$",
+    "rating": 4.6,
+    "reviews": 445,
+    "stock": 50,
+    "description": "Ultra-absorbent microfiber beach towel that dries 3x faster than cotton. Sand-free, compact, and foldable. Comes with a carrying pouch. Size: 150 x 75 cm.",
+    "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80",
+    "category": "Beach Accessories",
+    "tags": [
+      "towel",
+      "microfiber",
+      "quick-dry",
+      "beach"
+    ],
+    "isFeatured": false,
+    "discount": 0
+  },
+  {
+    "id": 11,
+    "name": "Portable Beach Umbrella",
+    "brand": "ShadeMaster",
+    "price": 55,
+    "currency": "$",
+    "rating": 4.5,
+    "reviews": 187,
+    "stock": 12,
+    "description": "Compact 6.5 ft windproof beach umbrella with UPF 50+ canopy. Lightweight aluminum pole with sand anchor. Sets up in under 60 seconds. Includes carry bag.",
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80",
+    "category": "Beach Accessories",
+    "tags": [
+      "umbrella",
+      "beach",
+      "sun shade",
+      "portable"
+    ],
+    "isFeatured": true,
+    "discount": 8
+  },
+  {
+    "id": 12,
+    "name": "Aloe Vera After-Sun Gel",
+    "brand": "CoolSkin",
+    "price": 12,
+    "currency": "$",
+    "rating": 4.8,
+    "reviews": 693,
+    "stock": 80,
+    "description": "Pure aloe vera cooling gel with vitamin E for soothing sunburned and irritated skin. Fragrance-free, alcohol-free formula. Fast-absorbing, non-sticky finish.",
+    "image": "https://images.unsplash.com/photo-1631390132935-f5fe7e67ece9?w=600&q=80",
+    "category": "Skincare",
+    "tags": [
+      "aloe vera",
+      "after sun",
+      "skincare",
+      "cooling"
+    ],
+    "isFeatured": false,
+    "discount": 0
+  },
+  {
+    "id": 13,
+    "name": "Women's Flowy Sundress",
+    "brand": "TropicLane",
+    "price": 45,
+    "currency": "$",
+    "rating": 4.7,
+    "reviews": 362,
+    "stock": 28,
+    "description": "Lightweight flowy sundress in breathable rayon fabric with a tropical print. Spaghetti straps, smocked bodice, and tiered hem. Perfect for beach and brunch.",
+    "image": "https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?w=600&q=80",
+    "category": "Summer Outfits",
+    "tags": [
+      "sundress",
+      "women",
+      "flowy",
+      "tropical"
+    ],
+    "isFeatured": true,
+    "discount": 12
+  },
+  {
+    "id": 14,
+    "name": "Waterproof Bluetooth Speaker",
+    "brand": "SoundWave",
+    "price": 49,
+    "currency": "$",
+    "rating": 4.6,
+    "reviews": 524,
+    "stock": 15,
+    "description": "IPX7 waterproof portable Bluetooth speaker with 360° surround sound. 12-hour battery life, floats on water, includes carabiner clip. Perfect for beach and pool parties.",
+    "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=600&q=80",
+    "category": "Beach Accessories",
+    "tags": [
+      "speaker",
+      "bluetooth",
+      "waterproof",
+      "music"
+    ],
+    "isFeatured": true,
+    "discount": 0
+  },
+  {
+    "id": 15,
+    "name": "Reef-Safe Mineral Sunscreen SPF 30",
+    "brand": "GlowGuard",
+    "price": 24,
+    "currency": "$",
+    "rating": 4.7,
+    "reviews": 418,
+    "stock": 40,
+    "description": "100% mineral reef-safe sunscreen with zinc oxide. Sheer, non-whitening formula. Ideal for sensitive skin and ocean swimming. Certified cruelty-free and vegan.",
+    "image": "https://images.unsplash.com/photo-1671483980831-00f0a1e9cc3f?w=600&q=80",
+    "category": "Skincare",
+    "tags": [
+      "sunscreen",
+      "mineral",
+      "reef-safe",
+      "SPF 30"
+    ],
+    "isFeatured": false,
+    "discount": 0
+  },
+  {
+    "id": 16,
+    "name": "Foldable Portable Beach Chair",
+    "brand": "RelaxCo",
+    "price": 65,
+    "currency": "$",
+    "rating": 4.5,
+    "reviews": 142,
+    "stock": 8,
+    "description": "Lightweight aluminum foldable beach chair with adjustable backrest and cup holder. Supports up to 300 lbs. Includes carry strap and matching storage bag.",
+    "image": "https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?w=600&q=80",
+    "category": "Beach Accessories",
+    "tags": [
+      "beach chair",
+      "foldable",
+      "portable",
+      "outdoor"
+    ],
+    "isFeatured": false,
+    "discount": 10
+  },
+  {
+    "id": 17,
+    "name": "Men's Casual Linen Shorts",
+    "brand": "BreezeWear",
+    "price": 30,
+    "currency": "$",
+    "rating": 4.6,
+    "reviews": 276,
+    "stock": 32,
+    "description": "100% linen casual shorts with elastic waistband and two side pockets. Breathable and moisture-wicking. Available in khaki, navy, white, and olive. Regular and relaxed fit.",
+    "image": "https://images.unsplash.com/photo-1562157873-818bc0726f68?w=600&q=80",
+    "category": "Summer Outfits",
+    "tags": [
+      "shorts",
+      "linen",
+      "men",
+      "casual"
+    ],
+    "isFeatured": false,
+    "discount": 0
+  },
+  {
+    "id": 18,
+    "name": "Polarized Sports Sunglasses",
+    "brand": "VisionPeak",
+    "price": 38,
+    "currency": "$",
+    "rating": 4.8,
+    "reviews": 389,
+    "stock": 20,
+    "description": "High-performance polarized sunglasses with TR90 flexible frame. 100% UV400 protection, anti-scratch lens coating. Ideal for cycling, running, fishing, and beach activities.",
+    "image": "https://images.unsplash.com/photo-1508296695146-257a814070b4?w=600&q=80",
+    "category": "Accessories",
+    "tags": [
+      "sunglasses",
+      "polarized",
+      "sports",
+      "UV400"
+    ],
+    "isFeatured": false,
+    "discount": 5
+  }
+]
