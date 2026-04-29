@@ -7,8 +7,9 @@ import { IoCartOutline } from 'react-icons/io5';
 const ProductCard = ({product}) => {
     return (
         <div className='bg-base-100 shadow-sm p-5 rounded-2xl'>
-           <div>
+           <div className='relative'>
              <Image src={product.image} alt={product.name} className='w-200 h-100 rounded-lg' width={300} height={150}></Image>
+             <div className='badge absolute bg-linear-to-r from-orange-500 to-pink-500 text-md text-white font-semibold top-2 left-3'>{product.category}</div>
            </div>
            <div className='flex justify-between items-center text-[12px] font-bold mt-3'>
             <p className='text-orange-500'>{product.brand}</p>

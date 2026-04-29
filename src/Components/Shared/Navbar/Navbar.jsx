@@ -1,3 +1,4 @@
+import NavLink from "@/Components/NavLink/NavLink";
 import Link from "next/link";
 import React from "react";
 
@@ -31,14 +32,14 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
             <li>
-              <Link href={"/"} className="hover:bg-orange-500 hover:text-white font-medium">Home</Link>
+              <NavLink href={"/"} className="hover:bg-orange-500 hover:text-white font-medium">Home</NavLink>
             </li>
             <li>
-              <Link href={"/products"} className="hover:bg-orange-500 hover:text-white font-medium">Products</Link>
+              <NavLink href={"/products"} className="hover:bg-orange-500 hover:text-white font-medium">Products</NavLink>
               
             </li>
             <li>
-              <Link href={"/"} className="hover:bg-orange-500 hover:text-white font-medium">My Profile</Link>
+              <NavLink href={"/"} className="hover:bg-orange-500 hover:text-white font-medium">My Profile</NavLink>
             </li>
           </ul>
         </div>
@@ -47,14 +48,14 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
            <li>
-              <Link href={"/"} className="hover:bg-orange-500 hover:text-white font-medium">Home</Link>
+              <NavLink href={"/"} className="hover:bg-orange-500 hover:text-white font-medium">Home</NavLink>
             </li>
             <li>
-              <Link href={"/products"} className="hover:bg-orange-500 hover:text-white font-medium">Products</Link>
+              <NavLink href={"/products"} className="hover:bg-orange-500 hover:text-white font-medium">Products</NavLink>
               
             </li>
             <li>
-              <Link href={"/profile"} className="hover:bg-orange-500 hover:text-white font-medium">My Profile</Link>
+              <NavLink href={"/profile"} className="hover:bg-orange-500 hover:text-white font-medium">My Profile</NavLink>
             </li>
         </ul>
       </div>

@@ -1,17 +1,14 @@
 import React from "react";
 import ProductCard from "../ProductCard/ProductCard";
 import Link from "next/link";
-const getAllProducts = async () => {
-  const res = await fetch("https://suncart-blue.vercel.app/data.json");
-  const productsData = await res.json();
-  return productsData;
-};
+import { getAllProducts } from "@/lib/AllFetch/allFetch";
+
 
 const PopularProducts = async () => {
   const data = await getAllProducts();
 
   const topProducts = data.slice(0, 3);
-  console.log(topProducts);
+
 
   return (
     <div>
