@@ -13,7 +13,7 @@ const PopularProducts = async () => {
   return (
     <div>
       <div className="space-y-2.5 text-center p-3">
-        <h1 className="text-4xl  font-bold">
+        <h1 className=" text-2xl md:text-4xl  font-bold">
           Popular{" "}
           <span className=" bg-linear-to-r from-orange-500 to-pink-500  text-transparent bg-clip-text font-bold">
             Products
@@ -23,7 +23,7 @@ const PopularProducts = async () => {
           Discover our most-loved summer essentials, handpicked for you
         </p>
       </div>
-      <div className="grid grid-cols-3 gap-8 mt-6 mb-6 animate__animated animate__zoomIn animate__delay-2s">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-6 mb-6 animate__animated animate__zoomIn animate__delay-2s">
         {topProducts.map((product, ind) => (
           <ProductCard key={ind} product={product}></ProductCard>
         ))}

@@ -9,7 +9,7 @@ const Footer = () => {
 
         <div className='bg-linear-to-br from-orange-50 via-pink-50 to-orange-50 border-t border-orange-100 p-10'>
 
-        <div className='grid grid-cols-4 gap-8 container mx-auto'>
+        <div className='grid   grid-cols-1 md:grid-cols-2  lg:grid-cols-4 gap-8 container mx-auto'>
             <div className='space-y-2'>
                 <h2 className="inline-block bg-linear-to-r from-orange-500 to-pink-500 text-2xl text-transparent bg-clip-text font-bold">SunCart</h2>
                 <p className='text-gray-600'>Your one-stop shop for all summer essentials. Quality products for unforgettable summer moments.</p>
