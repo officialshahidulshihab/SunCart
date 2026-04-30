@@ -14,12 +14,12 @@ const TopBrands = () => {
             Brands
           </span>
         </div>
-        <p className="text-gray-600 w-70 lg:w-120">
+        <p className="text-gray-600 w-70 lg:w-330">
           Partnering with the best summer brands worldwide
         </p>
       </div>
       <div className="grid  grid-cols-1 md:grid-cols-2  lg:grid-cols-4 gap-5 mt-6 mb-6">
-        <div className="space-y-2 w-90 lg:w-96 bg-base-100 shadow-sm p-4 rounded-xl text-center">
+        <div className="space-y-2 w-90 lg:w-75 bg-base-100 shadow-sm p-4 rounded-xl text-center">
           <div className="px-4 py-2 inline-block bg-orange-500 rounded-lg ">
             <PiAngularLogoLight className="text-4xl text-white" />
           </div>
@@ -29,7 +29,7 @@ const TopBrands = () => {
            UV400 Protection Specialists
           </p>
         </div>
-        <div className="space-y-2 w-90 lg:w-96 bg-base-100 shadow-sm p-4 rounded-xl text-center">
+        <div className="space-y-2 w-90 lg:w-75  bg-base-100 shadow-sm p-4 rounded-xl text-center">
           <div className="px-4 py-2 inline-block bg-pink-800 rounded-lg ">
             <TbBeach className="text-4xl text-white" />
           </div>
@@ -39,7 +39,7 @@ const TopBrands = () => {
            Trendsetting Collections
           </p>
         </div>
-        <div className="space-y-2 w-90 lg:w-96 bg-base-100 shadow-sm p-4 rounded-xl text-center">
+        <div className="space-y-2 w-90  lg:w-75 bg-base-100 shadow-sm p-4 rounded-xl text-center">
           <div className="px-4 py-2 inline-block bg-blue-500 rounded-lg ">
             <GiGuards className="text-4xl text-white" />
           </div>
@@ -49,7 +49,7 @@ const TopBrands = () => {
            Trusted by Millions
           </p>
         </div>
-        <div className="space-y-2 w-90 lg:w-96 bg-base-100 shadow-sm p-4 rounded-xl text-center">
+        <div className="space-y-2 w-90 lg:w-75 bg-base-100 shadow-sm p-4 rounded-xl text-center">
           <div className="px-4 py-2 inline-block bg-purple-500 rounded-lg ">
             <LuRollerCoaster className="text-4xl text-white" />
           </div>
