@@ -4,8 +4,10 @@ import React from "react";
 import { FcGoogle } from "react-icons/fc";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { authClient } from "@/lib/auth-client";
+import { useRouter } from "next/router";
 
 const LogInPage = () => {
+  const router = useRouter()
   const {
       register,
       handleSubmit,
@@ -29,6 +31,7 @@ const LogInPage = () => {
         }
         if(res){
           alert("Login successful")
+          router.push("/")
         }
       };
     return (
@@ -61,9 +64,7 @@ const LogInPage = () => {
             <span className="text-red-600">Password field is required</span>
           )}
         <div className="">
-            <button onClick={async()=>await authClient.signIn.social({
-                provider: "google",
-              })}  className="px-5 py-2.5 bg-linear-to-r from-orange-500 to-pink-500 text-white rounded-lg hover:shadow-lg cursor-pointer font-medium  transition-all w-full mt-3 ">LogIn</button>
+            <button  className="px-5 py-2.5 bg-linear-to-r from-orange-500 to-pink-500 text-white rounded-lg hover:shadow-lg cursor-pointer font-medium  transition-all w-full mt-3 ">LogIn</button>
         </div>
         </div>
 
@@ -74,7 +75,9 @@ const LogInPage = () => {
         </form>
         <div>
             <div className="flex justify-center items-center  p-5">
-            <button className="btn  w-full bg-white flex items-center gap-2 text-black border-[#e5e5e5]">
+            <button onClick={async()=>await authClient.signIn.social({
+                provider: "google",
+              })}  className="btn  w-full bg-white flex items-center gap-2 text-black border-[#e5e5e5]">
                 <FcGoogle className="text-xl" /> <span className="text-xl">Google</span>
             </button>
          </div>

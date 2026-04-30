@@ -4,7 +4,9 @@ import React from "react";
 import { FcGoogle } from "react-icons/fc";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { authClient } from "@/lib/auth-client";
+import { useRouter } from "next/router";
 const SignUpPage = () => {
+  const router = useRouter()
   const {
     register,
     handleSubmit,
@@ -14,11 +16,11 @@ const SignUpPage = () => {
 
   const handleSignUp = async (data) => {
    
-    const{email, password, name, pic}=data;
+    const{email, password, name, image}=data;
     const { data:res, error } = await authClient.signUp.email({
       name:name,
       email: email, 
-      pic:pic,
+      image:image,
     password: password,
     rememberMe: true,
     callbackURL: "/",
@@ -30,6 +32,7 @@ const SignUpPage = () => {
     }
     if(res){
       alert("Registration successful")
+      router.push("/")
     }
   };
   return (
