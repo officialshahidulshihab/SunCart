@@ -14,10 +14,11 @@ const SignUpPage = () => {
 
   const handleSignUp = async (data) => {
    
-    const{email, password, name}=data;
+    const{email, password, name, pic}=data;
     const { data:res, error } = await authClient.signUp.email({
       name:name,
       email: email, 
+      pic:pic,
     password: password,
     rememberMe: true,
     callbackURL: "/",
@@ -74,6 +75,7 @@ const SignUpPage = () => {
                   type="text"
                   className="input rounded-xl w-full"
                   placeholder="URL"
+                  {...register("pic")}
                 />
               </div>
               <div className="space-y-2">
