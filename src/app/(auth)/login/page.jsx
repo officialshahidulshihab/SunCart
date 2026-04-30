@@ -4,7 +4,8 @@ import React from "react";
 import { FcGoogle } from "react-icons/fc";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { authClient } from "@/lib/auth-client";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
+
 
 const LogInPage = () => {
   const router = useRouter()
