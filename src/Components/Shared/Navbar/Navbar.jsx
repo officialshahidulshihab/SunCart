@@ -7,7 +7,8 @@ import React from "react";
 
 const Navbar = () => {
   const { data: session, isPending } = authClient.useSession();
-  const sessionData=session?.user
+  const sessionData=session?.user;
+  console.log(sessionData);
   
     
   return (
@@ -71,7 +72,7 @@ const Navbar = () => {
             
             {/* <Image src={userImg} alt='user avatar' width={60} height={60}></Image> */}
 
-            <button onClick={async()=>await authClient.signOut()}  className='btn text-white bg-[#403F3F]'>LogOut</button>
+            <button onClick={async()=>await authClient.signOut()}  className='px-5 py-2.5 rounded-lg text-orange-600 font-medium hover:bg-orange-50 cursor-pointer transition-colors'>LogOut</button>
 
             
 
