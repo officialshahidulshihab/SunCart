@@ -4,4 +4,7 @@ export const authClient = createAuthClient({
     baseURL: "https://suncart-blue.vercel.app/"
 });
 
+
+
+
 export const { signIn, signUp, useSession } = createAuthClient()
