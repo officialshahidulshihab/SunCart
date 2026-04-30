@@ -24,7 +24,7 @@ const StarRating = ({ rating }) => {
 
 const ProductsDetailes = ({ product }) => {
     const allTag=product.tags;
-    const tag=allTag.map((p,ind)=><span className="px-5 py-2.5 rounded-lg bg-linear-to-r from-orange-500 to-pink-500 text-white" key={ind}>{p}</span>)
+    const tag=allTag.map((p,ind)=><span className=" px-2 py-1  lg:px-5 lg:py-2.5 rounded-lg bg-linear-to-r from-orange-500 to-pink-500 text-white" key={ind}>{p}</span>)
     
   return (
     <div className="  lg:grid   lg:grid-cols-5 gap-10 mt-6">
@@ -50,7 +50,7 @@ const ProductsDetailes = ({ product }) => {
            </div>
            <h1 className='text-3xl font-bold mt-3 text-left'>{product.name}</h1>
           
-           <p className="space-x-2 mt-6 text-left"><span className="text-xl font-bold">Features - </span>{tag}</p>
+           <p className="space-x-0.5 lg:space-x-2 mt-6 lg:text-left"><span className="text-xl font-bold">Features - </span>{tag}</p>
             <div className='mt-4 flex items-center  gap-15'>
                 <div >
                     <StarRating rating={product.rating}></StarRating>
