@@ -33,9 +33,9 @@ const LogInPage = () => {
       };
     return (
        <div className=" bg-linear-to-br from-orange-50 via-pink-50 to-yellow-50 flex items-center justify-center ">
-      <div>
+      <div className="bg-base-100 border-base-300 rounded-box  border">
         <form onSubmit={handleSubmit(handleLogin)} >
-          <fieldset className=" mt-6 mb-6 bg-base-100 border-base-300 rounded-box  border ">
+          <fieldset className=" mt-6 mb-6  ">
         <div className="bg-linear-to-br from-orange-500 to-pink-500 p-8 py-12 text-white text-center rounded-t-lg">
           <h1 className="text-3xl font-bold mb-2">Welcome Back!</h1>
           <p className="font-semibold">
@@ -61,12 +61,18 @@ const LogInPage = () => {
             <span className="text-red-600">Password field is required</span>
           )}
         <div className="">
-            <button className="px-5 py-2.5 bg-linear-to-r from-orange-500 to-pink-500 text-white rounded-lg hover:shadow-lg cursor-pointer font-medium  transition-all w-full mt-3 ">LogIn</button>
+            <button onClick={async()=>await authClient.signIn.social({
+                provider: "google",
+              })}  className="px-5 py-2.5 bg-linear-to-r from-orange-500 to-pink-500 text-white rounded-lg hover:shadow-lg cursor-pointer font-medium  transition-all w-full mt-3 ">LogIn</button>
         </div>
         </div>
 
          <div className="divider p-5">Or continue with</div>
-         <div>
+         
+
+      </fieldset>
+        </form>
+        <div>
             <div className="flex justify-center items-center  p-5">
             <button className="btn  w-full bg-white flex items-center gap-2 text-black border-[#e5e5e5]">
                 <FcGoogle className="text-xl" /> <span className="text-xl">Google</span>
@@ -76,9 +82,6 @@ const LogInPage = () => {
             <h1 className="text-gray-700">Don't have an account? <Link href={"/signup"} className="text-orange-600 font-bold">Resister here</Link></h1>
          </div>
          </div>
-
-      </fieldset>
-        </form>
       </div>
     </div>
     );
