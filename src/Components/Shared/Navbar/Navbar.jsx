@@ -70,7 +70,7 @@ const Navbar = () => {
         {isPending? <span className="loading loading-spinner text-warning"></span>: sessionData? (<div className='flex gap-4 items-center'>
             <h1>{sessionData?.name}</h1>
             
-            <Image src={sessionData?.image} alt='user avatar' width={60} height={60}></Image>
+            <Image src={sessionData.image} alt='user avatar' width={60} height={60}></Image>
 
             <button onClick={async()=>await authClient.signOut()}  className='px-5 py-2.5 rounded-lg text-orange-600 font-medium hover:bg-orange-50 cursor-pointer transition-colors'>LogOut</button>
 
