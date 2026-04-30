@@ -60,8 +60,10 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end space-x-2.5">
-        <button className="px-5 py-2.5 rounded-lg text-orange-600 font-medium hover:bg-orange-50 cursor-pointer transition-colors">Login</button>
-        <button className="px-5 py-2.5 bg-linear-to-r from-orange-500 to-pink-500 text-white rounded-lg hover:shadow-lg cursor-pointer font-medium  transition-all">Register</button>
+       <Link href={"/login"}>
+        <button className="px-5 py-2.5 rounded-lg text-orange-600 font-medium hover:bg-orange-50 cursor-pointer transition-colors">Login</button></Link>
+        <Link href={"/signup"}>
+        <button className="px-5 py-2.5 bg-linear-to-r from-orange-500 to-pink-500 text-white rounded-lg hover:shadow-lg cursor-pointer font-medium  transition-all">Register</button></Link>
       </div>
     </div>
     </div>
