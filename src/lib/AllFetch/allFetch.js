@@ -3,3 +3,5 @@ export const getAllProducts = async () => {
   const productsData = await res.json();
   return productsData;
 };
+
+

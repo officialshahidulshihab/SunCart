@@ -23,14 +23,14 @@ const PopularProducts = async () => {
           Discover our most-loved summer essentials, handpicked for you
         </p>
       </div>
-      <div className="grid grid-cols-3 gap-8 mt-6 mb-6">
+      <div className="grid grid-cols-3 gap-8 mt-6 mb-6 animate__animated animate__zoomIn animate__delay-2s">
         {topProducts.map((product, ind) => (
           <ProductCard key={ind} product={product}></ProductCard>
         ))}
       </div>
       <div className="flex justify-center items-center mb-10 mt-10">
         <Link href={"/products"}>
-        <button className="px-5 py-2.5 rounded-lg bg-linear-to-r from-orange-500 to-pink-500 font-bold cursor-pointer    text-white text-xl">
+        <button className="px-5 py-2.5 rounded-lg bg-linear-to-r from-orange-500 to-pink-500 font-bold cursor-pointer animate__animated animate__bounceIn  animate__delay-3s   text-white text-xl">
         <span>View All Products</span>
       </button></Link>
       </div>

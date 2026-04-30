@@ -50,9 +50,9 @@ const ProductPageWork = ({ allProducts }) => {
       </div>
       <div className="flex gap-3 mt-6 mb-6 items-center">
         <div><h1 className="flex items-center gap-2 text-xl font-semibold"><CiFilter /> <span>Filters:</span></h1></div>
-        <div className="space-x-2">
+        <div className="space-x-2 ">
             {["All", "Accessories", "Skincare", "Swimwear", "Footwear", "Summer Outfits", "Beach Accessories"].map((cat,ind)=>{
-               return <button key={ind} onClick={()=>{setCategory(category===cat ? "All" : cat)}} className={category===cat ? "bg-linear-to-r from-orange-500 to-pink-500 text-xl text-white btn" : "btn btn-outline"}>{cat}</button>
+               return <button key={ind} onClick={()=>{setCategory(category===cat ? "All" : cat)}} className={category===cat ? "bg-linear-to-r from-orange-500 to-pink-500 text-xl text-white btn" : "btn btn-outline" }>{cat}</button>
             })}
         
                 

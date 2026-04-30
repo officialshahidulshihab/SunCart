@@ -1,3 +1,4 @@
+import 'animate.css';
 import Banner from "@/Components/Banner/Banner";
 import PopularProducts from "@/Components/PopularProducts/PopularProducts";
 import SummerTips from "@/Components/SummerTips/SummerTips";
