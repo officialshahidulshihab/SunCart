@@ -27,7 +27,7 @@ const ProductsDetailes = ({ product }) => {
     const tag=allTag.map((p,ind)=><span className="px-5 py-2.5 rounded-lg bg-linear-to-r from-orange-500 to-pink-500 text-white" key={ind}>{p}</span>)
     
   return (
-    <div className="grid grid-cols-5 gap-10 mt-6">
+    <div className="  lg:grid   lg:grid-cols-5 gap-10 mt-6">
       <div className="bg-base-100 shadow-sm p-5 rounded-2xl animate__animated animate__zoomIn  col-span-2">
         <div className="relative ">
           <Image
