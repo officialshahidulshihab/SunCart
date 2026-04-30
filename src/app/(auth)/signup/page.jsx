@@ -79,7 +79,7 @@ const SignUpPage = () => {
                   type="text"
                   className="input rounded-xl w-full"
                   placeholder="URL"
-                  {...register("pic")}
+                  {...register("image")}
                 />
               </div>
               <div className="space-y-2">

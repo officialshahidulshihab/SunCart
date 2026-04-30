@@ -4,6 +4,7 @@ import { BsTruck } from "react-icons/bs";
 import { FaStarHalfAlt } from "react-icons/fa";
 import { FaBoxOpen, FaRegStar, FaStar } from "react-icons/fa6";
 import { MdOutlinePayment } from "react-icons/md";
+import { notFound } from "next/navigation"
 const StarRating = ({ rating }) => {
   return (
     <div className="flex items-center gap-0.5">
@@ -15,6 +16,7 @@ const StarRating = ({ rating }) => {
         return <FaRegStar key={star} className="text-gray-300" />;
       })}
       <span className="text-sm text-gray-600 font-bold ml-1">{rating}</span>
+
     </div>
   );
 };
@@ -23,6 +25,7 @@ const StarRating = ({ rating }) => {
 const ProductsDetailes = ({ product }) => {
     const allTag=product.tags;
     const tag=allTag.map((p,ind)=><span className="px-5 py-2.5 rounded-lg bg-linear-to-r from-orange-500 to-pink-500 text-white" key={ind}>{p}</span>)
+    
   return (
     <div className="grid grid-cols-5 gap-10 mt-6">
       <div className="bg-base-100 shadow-sm p-5 rounded-2xl animate__animated animate__zoomIn  col-span-2">

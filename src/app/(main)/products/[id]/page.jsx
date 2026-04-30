@@ -2,6 +2,7 @@ import ProductCard from '@/Components/ProductCard/ProductCard';
 import ProductsDetailes from '@/Components/ProductsDetailes/ProductsDetailes';
 import { getAllProducts } from '@/lib/AllFetch/allFetch';
 import React from 'react';
+import { notFound } from "next/navigation"
 
 const ProductsDetails =async ({params}) => {
     const allProducts=await getAllProducts();
@@ -9,6 +10,9 @@ const ProductsDetails =async ({params}) => {
     
 
     const product=allProducts.find((p)=>Number(p.id)===Number(id))
+    if (!product) {
+        notFound()
+    }
     
     
     return (
