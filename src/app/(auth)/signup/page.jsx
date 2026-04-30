@@ -33,9 +33,9 @@ const SignUpPage = () => {
   };
   return (
     <div className=" bg-linear-to-br from-orange-50 via-pink-50 to-yellow-50 flex items-center justify-center ">
-      <div>
+      <div className="bg-base-100 border-base-300 rounded-box  border">
         <form onSubmit={handleSubmit(handleSignUp)}>
-          <fieldset className=" mt-6 mb-6 bg-base-100 border-base-300 rounded-box  border ">
+          <fieldset className=" mt-6 mb-6  ">
             <div className="bg-linear-to-br from-orange-500 to-pink-500 p-8 py-12 text-white text-center rounded-t-lg">
               <h1 className="text-3xl font-bold mb-2">Join SunCart</h1>
               <p className="font-semibold">
@@ -95,10 +95,14 @@ const SignUpPage = () => {
               </div>
             </div>
 
+          </fieldset>
+        </form>
             <div className="divider p-5">Or continue with</div>
             <div>
               <div className="flex justify-center items-center  p-5">
-                <button className="btn  w-full bg-white flex items-center gap-2 text-black border-[#e5e5e5]">
+                <button onClick={async()=>await authClient.signIn.social({
+    provider: "google",
+  })} className="btn  w-full bg-white flex items-center gap-2 text-black border-[#e5e5e5]">
                   <FcGoogle className="text-xl" />{" "}
                   <span className="text-xl">Google</span>
                 </button>
@@ -112,8 +116,6 @@ const SignUpPage = () => {
                 </h1>
               </div>
             </div>
-          </fieldset>
-        </form>
       </div>
     </div>
   );
