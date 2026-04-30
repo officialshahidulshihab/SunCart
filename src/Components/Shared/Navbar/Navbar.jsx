@@ -117,7 +117,7 @@ const Navbar = () => {
                   await authClient.signOut();
                   router.push("/login");
                 }}
-                className="px-5 py-2.5 rounded-lg text-orange-600 font-medium hover:bg-orange-50 cursor-pointer transition-colors"
+                className=" px-2 py-1  lg:px-5 lg:py-2.5 rounded-lg text-orange-600 font-medium hover:bg-orange-50 cursor-pointer transition-colors"
               >
                 LogOut
               </button>
