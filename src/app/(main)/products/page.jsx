@@ -1,8 +1,10 @@
 import 'animate.css';
 import ProductPageWork from "@/Components/ProdcutPage/ProductPageWork";
 import { getAllProducts } from "@/lib/AllFetch/allFetch";
-
-
+export const metadata = {        
+  title: "Summer Collection",
+  description: "Explore our complete range of premium summer essentials",
+};
 
 const ProductsPage = async () => {
     

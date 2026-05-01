@@ -4,7 +4,23 @@ import { getAllProducts } from '@/lib/AllFetch/allFetch';
 import React from 'react';
 import { notFound } from "next/navigation"
 
+export async function generateMetadata({ params }) { 
+  const allProducts = await getAllProducts();
+  const { id } = await params;
+  const product = allProducts.find((p) => Number(p.id) === Number(id));
+
+  if (!product) {
+    return { title: "Product Not Found" };
+  }
+
+  return {
+    title: product.name,
+    description: product.description,
+  };
+}
+
 const ProductsDetails =async ({params}) => {
+  
     const allProducts=await getAllProducts();
     const {id}=await params;
     
@@ -13,6 +29,8 @@ const ProductsDetails =async ({params}) => {
     if (!product) {
         notFound()
     }
+
+    
     
     
     return (
