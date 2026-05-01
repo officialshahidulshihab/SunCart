@@ -70,7 +70,7 @@ const ProfilePage = () => {
           )}
         </div>
         <div className="p-6">
-          <div className="mt-3 flex justify-between p-6">
+          <div className="mt-3 space-y-2 flex flex-col lg:justify-between lg:flex-row p-6">
             <div>
               <h2 className="text-3xl font-bold">{user?.name}</h2>
               <p className="flex items-center gap-2 mt-2">
@@ -97,7 +97,7 @@ const ProfilePage = () => {
               <span>Profile Information</span>
             </h2>
 
-            <div className="grid grid-cols-4  gap-5">
+            <div className="grid grid-cols-1 lg:grid-cols-4  gap-5">
               <div className="col-span-2 border border-orange-100 p-6 flex items-center gap-3 rounded-xl mt-3 bg-base-100 shadow-sm">
                 <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center ">
                   <FaUser className="text-orange-400 text-xl" />
