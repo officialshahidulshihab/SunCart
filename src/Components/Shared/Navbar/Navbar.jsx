@@ -6,6 +6,7 @@ import Link from "next/link";
 import React from "react";
 import { useRouter } from "next/navigation";
 const Navbar = () => {
+  const router = useRouter();
   const { data: session, isPending } = authClient.useSession();
   const sessionData = session?.user;
   console.log(sessionData);
@@ -104,13 +105,19 @@ const Navbar = () => {
             <div className="flex gap-4 items-center">
               <h1>{sessionData?.name}</h1>
 
-              <Image
-                src={sessionData.image}
-                alt="user avatar"
-                width={60}
-                className="rounded-full"
-                height={60}
-              ></Image>
+              {sessionData?.image ? (
+                <Image
+                  src={sessionData.image}
+                  alt="user avatar"
+                  width={40}
+                  height={40}
+                  className="rounded-full object-cover"
+                />
+              ) : (
+                <div className="w-10 h-10 rounded-full bg-linear-to-r from-orange-500 to-pink-500 flex items-center justify-center text-white font-bold text-lg">
+                  {sessionData?.name?.charAt(0).toUpperCase()}
+                </div>
+              )}
 
               <button
                 onClick={async () => {

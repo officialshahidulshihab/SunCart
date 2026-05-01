@@ -9,6 +9,12 @@ export const auth = betterAuth({
     emailAndPassword: { 
     enabled: true, 
   }, 
+   user: {
+        changeEmail: {
+            enabled: true,
+            updateEmailWithoutVerification: true
+        }
+    },
    baseURL: process.env.BETTER_AUTH_URL, 
     socialProviders: {
         google: { 
