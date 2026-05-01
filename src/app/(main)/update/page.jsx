@@ -91,22 +91,18 @@ const UpdatePage = () => {
           />
         </fieldset>
 
-        <div className="flex justify-center gap-5 mt-6">
-          <div className="">
-            <button type="button" className="btn ">
-              Cancel
-            </button>
-          </div>
-          <div className="">
+       
+          
+          <div className="mt-3">
             <button
               type="submit"
-              className="bg-linear-to-r from-orange-500 to-pink-500  text-white font-semibold flex items-center gap-2  btn"
+              className="bg-linear-to-r from-orange-500 to-pink-500  text-white font-semibold flex items-center gap-2 w-full   btn"
             >
               <FaPenToSquare />
               <span>Update Information</span>
             </button>
           </div>
-        </div>
+       
       </form>
     </div>
    </div>
