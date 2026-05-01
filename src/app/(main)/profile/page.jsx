@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
-import React from "react";
-import demoImage from "@/asset/girl.jpg";
+import React, { useState } from "react";
+
 import { FaCamera, FaPenToSquare, FaUser } from "react-icons/fa6";
 import { IoMail } from "react-icons/io5";
 import { useForm, SubmitHandler } from "react-hook-form";
@@ -15,20 +15,24 @@ const ProfilePage = () => {
     watch,
     formState: { errors },
   } = useForm();
+  const [modalError, setModalError] = useState("");
 
   const handleUpdateClient = async (data) => {
+    setModalError("");
+
     const { image, name, email } = data;
     const { data: res, error } = await authClient.updateUser({
       image: image,
       name: name,
-      email:email,
+      email: email,
     });
     if (error) {
-      toast.error(error.message);
+      setModalError(error.message || "Something went wrong.");
+      return;
     }
     if (res) {
       toast.success("Profile updated successfully!");
-      document.getElementById("my_modal_3").close(); 
+      document.getElementById("my_modal_3").close();
     }
   };
 
@@ -59,8 +63,8 @@ const ProfilePage = () => {
               className="rounded-full w-37.5 h-37.5"
             ></Image>
           ) : (
-            <div className="w-37.5 h-37.5 rounded-full bg-blue-500 text-white">
-              {user?.name?.charAt(0).toUpperCase()}
+            <div className="w-37.5 h-37.5 rounded-full bg-linear-to-br from-orange-500 via-pink-500 to-rose-500 text-white flex items-center justify-center text-5xl font-bold border-4 border-white shadow-xl">
+              {user?.name?.charAt(0)?.toUpperCase() || "U"}
             </div>
           )}
         </div>
@@ -131,7 +135,7 @@ const ProfilePage = () => {
             <p className="font-bold text-2xl">Update Profile</p>
             <p>Modify your account information</p>
           </div>
-          <div>
+          <div className="flex justify-center mt-2">
             {user?.image ? (
               <Image
                 src={user?.image}
@@ -141,8 +145,8 @@ const ProfilePage = () => {
                 className="rounded-full w-37.5 h-37.5 mx-auto"
               ></Image>
             ) : (
-              <div className="w-37.5 h-37.5 rounded-full mx-auto mt-6 bg-blue-500 text-white">
-                {user?.name?.charAt(0).toUpperCase()}
+              <div className="w-37.5 h-37.5 rounded-full bg-linear-to-br from-orange-500 via-pink-500 to-rose-500 text-white flex items-center justify-center text-5xl font-bold border-4 border-white shadow-xl">
+                {user?.name?.charAt(0)?.toUpperCase() || "U"}
               </div>
             )}
           </div>
@@ -183,6 +187,11 @@ const ProfilePage = () => {
               <span className="text-red-600">Email field is required</span>
             )}
             <div className="flex justify-center gap-5 mt-6">
+              {modalError && (
+                <div className="mt-4 rounded-xl bg-red-50 border border-red-200 text-red-700 px-4 py-3 text-sm font-medium">
+                  {modalError}
+                </div>
+              )}
               <div className="">
                 <button
                   onClick={() => document.getElementById("my_modal_3").close()}
