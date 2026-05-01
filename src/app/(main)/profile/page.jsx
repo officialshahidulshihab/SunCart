@@ -16,18 +16,24 @@ const ProfilePage = () => {
     formState: { errors },
   } = useForm();
   const [modalError, setModalError] = useState("");
+  
 
   const handleUpdateClient = async (data) => {
-    setModalError("");
-
     const { image, name, email } = data;
+    setModalError("");
+   const { data: resEmail, error:emailError } =await authClient.changeEmail({
+    newEmail: email,
+    
+});
+
+    
     const { data: res, error } = await authClient.updateUser({
       image: image,
       name: name,
-      newEmail: email,
+      
     });
-    if (error) {
-      setModalError(error.message || "Something went wrong.");
+    if (error || resEmail) {
+      setModalError(error.message || resEmail.message || "Something went wrong.");
       return;
     }
     if (res) {
@@ -151,6 +157,11 @@ const ProfilePage = () => {
             )}
           </div>
           <form className="p-5" onSubmit={handleSubmit(handleUpdateClient)}>
+            {modalError && (
+                <div className="mt-4 rounded-xl bg-red-50 border border-red-200 text-red-700 px-4 py-3 text-sm font-medium">
+                  {modalError}
+                </div>
+              )}
             <fieldset className="fieldset">
               <legend className="fieldset-legend text-gray-600">
                 Profile Photo URL
@@ -187,11 +198,7 @@ const ProfilePage = () => {
               <span className="text-red-600">Email field is required</span>
             )}
             <div className="flex justify-center gap-5 mt-6">
-              {modalError && (
-                <div className="mt-4 rounded-xl bg-red-50 border border-red-200 text-red-700 px-4 py-3 text-sm font-medium">
-                  {modalError}
-                </div>
-              )}
+              
               <div className="">
                 <button
                   onClick={() => document.getElementById("my_modal_3").close()}

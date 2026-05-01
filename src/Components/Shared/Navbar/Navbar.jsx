@@ -111,7 +111,7 @@ const Navbar = () => {
                   alt="user avatar"
                   width={40}
                   height={40}
-                  className="rounded-full object-cover"
+                  className=" w-15 h-15 rounded-full object-cover"
                 />
               ) : (
                 <div className="w-10 h-10 rounded-full bg-linear-to-r from-orange-500 to-pink-500 flex items-center justify-center text-white font-bold text-lg">
