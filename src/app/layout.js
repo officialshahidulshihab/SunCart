@@ -27,14 +27,14 @@ export default function RootLayout({ children }) {
         
         <main className="container mx-auto">
           {children}
+          </main>
+       
           <Toaster
           position="top-right"
           richColors
           closeButton
           duration={3000}
         />
-          </main>
-       
         
         </body>
     </html>
