@@ -21,11 +21,18 @@ const ProfilePage = () => {
       image: image,
       name: name,
     });
+    if (error) {
+      alert(error.message);
+    }
+    if (res) {
+      alert("Profile updated successfully!");
+      document.getElementById("my_modal_3").close(); 
+    }
   };
 
   const { data: session, isPending } = authClient.useSession();
   const user = session?.user;
-  console.log(user);
+
   return (
     <div className="bg-[radial-gradient(circle_at_70%_50%,rgba(236,72,153,0.1),transparent_50%)]">
       <div>
@@ -41,21 +48,27 @@ const ProfilePage = () => {
       </div>
       <div className="bg-base-100 shadow-sm rounded-xl mt-3 mb-6">
         <div className="bg-linear-to-r from-orange-500 to-pink-500 rounded-t-xl p-5">
-          <Image
-            src={demoImage}
-            alt="girl"
-            width={100}
-            height={70}
-            className="rounded-full w-37.5 h-37.5"
-          ></Image>
+          {user?.image ? (
+            <Image
+              src={user?.image}
+              alt={user?.name}
+              width={100}
+              height={70}
+              className="rounded-full w-37.5 h-37.5"
+            ></Image>
+          ) : (
+            <div className="w-37.5 h-37.5 rounded-full bg-white flex items-center justify-center text-orange-500 text-5xl font-bold">
+              {user?.name?.charAt(0).toUpperCase()}
+            </div>
+          )}
         </div>
         <div className="p-6">
           <div className="mt-3 flex justify-between p-6">
             <div>
-              <h2 className="text-3xl font-bold">Name</h2>
+              <h2 className="text-3xl font-bold">{user?.name}</h2>
               <p className="flex items-center gap-2 mt-2">
                 <IoMail className="text-orange-400 " />
-                <span>Email</span>
+                <span>{user?.email}</span>
               </p>
             </div>
             <div>
@@ -84,7 +97,7 @@ const ProfilePage = () => {
                 </div>
                 <div>
                   <h1 className="text-gray-600">Full Name</h1>
-                  <p className="text-xl font-bold">Name</p>
+                  <p className="text-xl font-bold">{user?.name}</p>
                 </div>
               </div>
               <div className="col-span-2 border bg-base-100 shadow-sm  border-orange-100 p-6 flex items-center gap-3 rounded-xl mt-3">
@@ -93,7 +106,7 @@ const ProfilePage = () => {
                 </div>
                 <div>
                   <h1 className="text-gray-600">Email Address</h1>
-                  <p className="text-xl font-bold">Email</p>
+                  <p className="text-xl font-bold">{user?.email}</p>
                 </div>
               </div>
             </div>
@@ -103,7 +116,7 @@ const ProfilePage = () => {
               </div>
               <div>
                 <h1 className="text-gray-600">Photo URL</h1>
-                <p className="text-xl font-bold">Photo</p>
+                <p className="text-xl font-bold">{user?.image}</p>
               </div>
             </div>
           </div>
@@ -117,13 +130,19 @@ const ProfilePage = () => {
             <p>Modify your account information</p>
           </div>
           <div>
-            <Image
-              src={demoImage}
-              alt="girl"
-              width={100}
-              height={70}
-              className="rounded-full w-30 h-30 mx-auto mt-6"
-            ></Image>
+            {user?.image ? (
+              <Image
+                src={user?.image}
+                alt={user?.name}
+                width={100}
+                height={70}
+                className="rounded-full w-37.5 h-37.5"
+              ></Image>
+            ) : (
+              <div className="w-37.5 h-37.5 rounded-full bg-white flex items-center justify-center text-orange-500 text-5xl font-bold">
+                {user?.name?.charAt(0).toUpperCase()}
+              </div>
+            )}
           </div>
           <form className="p-5" onSubmit={handleSubmit(handleUpdateClient)}>
             <fieldset className="fieldset">
@@ -152,15 +171,20 @@ const ProfilePage = () => {
             {errors.email && (
               <span className="text-red-600">Name field is required</span>
             )}
-            <div className="grid grid-cols-2 gap-5 mt-6">
-              <div className="col-span-1">
-                <button className="btn px-40 ">Cancel</button>
+            <div className="flex justify-center gap-5 mt-6">
+              <div className="">
+                <button
+                  onClick={() => document.getElementById("my_modal_3").close()}
+                  className="btn "
+                >
+                  Cancel
+                </button>
               </div>
-              <div className="col-span-1">
-                <h2 className="bg-linear-to-r from-orange-500 to-pink-500  text-white font-semibold flex items-center gap-2  btn">
+              <div className="">
+                <button className="bg-linear-to-r from-orange-500 to-pink-500  text-white font-semibold flex items-center gap-2  btn">
                   <FaPenToSquare />
                   <span>Update Information</span>
-                </h2>
+                </button>
               </div>
             </div>
           </form>
