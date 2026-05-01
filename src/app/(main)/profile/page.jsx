@@ -6,6 +6,7 @@ import { FaCamera, FaPenToSquare, FaUser } from "react-icons/fa6";
 import { IoMail } from "react-icons/io5";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { authClient } from "@/lib/auth-client";
+import { toast } from "sonner";
 
 const ProfilePage = () => {
   const {
@@ -16,16 +17,17 @@ const ProfilePage = () => {
   } = useForm();
 
   const handleUpdateClient = async (data) => {
-    const { image, name } = data;
+    const { image, name, email } = data;
     const { data: res, error } = await authClient.updateUser({
       image: image,
       name: name,
+      email:email,
     });
     if (error) {
-      alert(error.message);
+      toast.error(error.message);
     }
     if (res) {
-      alert("Profile updated successfully!");
+      toast.success("Profile updated successfully!");
       document.getElementById("my_modal_3").close(); 
     }
   };
@@ -57,7 +59,7 @@ const ProfilePage = () => {
               className="rounded-full w-37.5 h-37.5"
             ></Image>
           ) : (
-            <div className="w-37.5 h-37.5 rounded-full bg-white flex items-center justify-center text-orange-500 text-5xl font-bold">
+            <div className="w-37.5 h-37.5 rounded-full bg-blue-500 text-white">
               {user?.name?.charAt(0).toUpperCase()}
             </div>
           )}
@@ -111,20 +113,20 @@ const ProfilePage = () => {
               </div>
             </div>
             <div className="col-span-2 border bg-base-100 shadow-sm  border-orange-100 p-6 flex items-center gap-3 rounded-xl mt-3">
-              <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center ">
+              <div className="w-12 h-12 shrink-0 bg-blue-100 rounded-xl flex items-center justify-center ">
                 <FaCamera className="text-blue-400 text-xl" />
               </div>
-              <div>
+              <div className="flex-1 min-w-0">
                 <h1 className="text-gray-600">Photo URL</h1>
-                <p className="text-xl font-bold">{user?.image}</p>
+                <p className="text-sm break-all">{user?.image}</p>
               </div>
             </div>
           </div>
         </div>
       </div>
       {/* Modal */}
-      <dialog id="my_modal_3" className="modal ">
-        <div className="bg-base-100 shadow-sm rounded-xl w-200">
+      <dialog id="my_modal_3" className="modal">
+        <div className="bg-base-100 shadow-sm rounded-xl modal-box max-w-3xl p-0 overflow-y-auto max-h-screen">
           <div className="bg-linear-to-r from-orange-500 to-pink-500 rounded-t-xl p-15 text-white text-center">
             <p className="font-bold text-2xl">Update Profile</p>
             <p>Modify your account information</p>
@@ -136,10 +138,10 @@ const ProfilePage = () => {
                 alt={user?.name}
                 width={100}
                 height={70}
-                className="rounded-full w-37.5 h-37.5"
+                className="rounded-full w-37.5 h-37.5 mx-auto"
               ></Image>
             ) : (
-              <div className="w-37.5 h-37.5 rounded-full bg-white flex items-center justify-center text-orange-500 text-5xl font-bold">
+              <div className="w-37.5 h-37.5 rounded-full mx-auto mt-6 bg-blue-500 text-white">
                 {user?.name?.charAt(0).toUpperCase()}
               </div>
             )}
@@ -168,8 +170,17 @@ const ProfilePage = () => {
                 placeholder="Name"
               />
             </fieldset>
+            <fieldset>
+              <label className="fieldset-legend text-gray-600">Email</label>
+              <input
+                {...register("email", { required: true })}
+                type="text"
+                className="input rounded-xl w-full"
+                placeholder="Email"
+              />
+            </fieldset>
             {errors.email && (
-              <span className="text-red-600">Name field is required</span>
+              <span className="text-red-600">Email field is required</span>
             )}
             <div className="flex justify-center gap-5 mt-6">
               <div className="">

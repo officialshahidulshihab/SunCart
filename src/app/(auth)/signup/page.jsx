@@ -5,7 +5,7 @@ import { FcGoogle } from "react-icons/fc";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { authClient } from "@/lib/auth-client";
 import { useRouter } from "next/navigation";
-
+import { toast } from "sonner";
 const SignUpPage = () => {
   const router = useRouter()
   const {
@@ -29,10 +29,10 @@ const SignUpPage = () => {
     });
     console.log(res,error);
      if(error){
-      alert(error.message)
+      toast.error(error.message);
     }
     if(res){
-      alert("Registration successful")
+       toast.success("Registration successfully!");
       router.push("/login")
     }
   };
