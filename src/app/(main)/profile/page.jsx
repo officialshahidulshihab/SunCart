@@ -24,7 +24,7 @@ const ProfilePage = () => {
     const { data: res, error } = await authClient.updateUser({
       image: image,
       name: name,
-      email: email,
+      newEmail: email,
     });
     if (error) {
       setModalError(error.message || "Something went wrong.");
