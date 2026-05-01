@@ -21,25 +21,29 @@ const ProfilePage = () => {
   const handleUpdateClient = async (data) => {
     const { image, name, email } = data;
     setModalError("");
-   const { data: resEmail, error:emailError } =await authClient.changeEmail({
-    newEmail: email,
-    
-});
+    if (email !== user?.email) {
+    const { error: emailError } = await authClient.changeEmail({
+      newEmail: email,
+    });
 
+    if (emailError) {
+      setModalError(emailError.message || "Email update failed");
+      return;
+    }
     
     const { data: res, error } = await authClient.updateUser({
       image: image,
       name: name,
       
     });
-    if (error || resEmail) {
-      setModalError(error.message || resEmail.message || "Something went wrong.");
+    if (error ) {
+      setModalError(error.message  || "Something went wrong.");
       return;
     }
-    if (res) {
+    
       toast.success("Profile updated successfully!");
       document.getElementById("my_modal_3").close();
-    }
+    
   };
 
   const { data: session, isPending } = authClient.useSession();
@@ -189,7 +193,7 @@ const ProfilePage = () => {
               <label className="fieldset-legend text-gray-600">Email</label>
               <input
                 {...register("email", { required: true })}
-                type="text"
+                type="email"
                 className="input rounded-xl w-full"
                 placeholder="Email"
               />
